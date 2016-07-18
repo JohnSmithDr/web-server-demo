@@ -27,7 +27,7 @@ app.use('/static', express.static(path.resolve(__dirname, '../static')));
 /// setup middleware
 ///
 app.use(require('./middleware/request-logger'));
-app.use(require('./routes'));
+app.use(require('./routes/index'));
 
 /// handling error
 ///
