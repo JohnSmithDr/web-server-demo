@@ -1,3 +1,9 @@
 .idea/
 
+# nodejs
 */node_modules/
+
+# asp.net
+*/bin/
+*/obj/
+*.lock.json
