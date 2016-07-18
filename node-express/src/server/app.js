@@ -6,6 +6,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const logger = require('./logger');
 
+require('./models');
+
 let app = express();
 let port = config.get('application.port');
 
@@ -17,7 +19,7 @@ app.set('views', path.resolve(__dirname, 'views'));
 
 /// setup body parser
 ///
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 /// setup static path
