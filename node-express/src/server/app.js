@@ -17,6 +17,8 @@ app.engine('.html', require('ejs').__express);
 app.set('view engine', 'html');
 app.set('views', path.resolve(__dirname, 'views'));
 
+app.locals.refineContent = require('./utils/refine-content');
+
 /// setup body parser
 ///
 app.use(bodyParser.urlencoded({ extended: true }));
